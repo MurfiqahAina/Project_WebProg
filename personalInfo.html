@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+  <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a> 
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">HOME</a> 
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">ABOUT ME</a> 
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">CONTACT</a><br><br>
+  <a href="main.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">MAIN PAGE</a>
+  <a href="tools.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-12">TOOLS PAGE</a>
+  
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">MURFIQAH AINA MOHAMED</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+  
+<!-- Wrapper for the grid -->
+<div style="position: relative; text-align: center;">
+
+    <!-- Title in the center -->
+    <h2 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.6); color: white; padding: 10px 20px; border-radius: 5px;">
+      Welcome To My Page
+    </h2>
+  
+    <!-- Photo grid -->
+    <div class="w3-row">
+      <div class="w3-quarter">
+        <img src="mur birthday.jpg" style="width:100%" >
+        <img src="mur kd.jpg" style="width:100%" >
+      </div>
+  
+      <div class="w3-quarter">
+        <img src="mur amma.jpg" style="width:100%" >
+        <img src="mur sijil.jpg" style="width:100%" >
+      </div>
+  
+      <div class="w3-quarter">
+        <img src="mur biru 2.jpg" style="width:100%" >
+        <img src="kawan kl.jpg" style="width:100%" >
+      </div>
+  
+      <div class="w3-quarter">
+        <img src="kawan jb.jpg" style="width:100%" >
+        <img src="mur red 1.jpg" style="width:100%" >
+      </div>
+    </div>
+  
+  </div>
+  
+
+  <!-- About section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+    <h4><b>About Me</b></h4>
+    <img src="mur suit 2.jpg" alt="Me" class="w3-image w3-padding-32" width="200" height="250">
+    <div class="w3-content w3-justify" style="max-width:600px">
+      <h4>Hello! I'm <b>MURFIQAH AINA</b></h4>
+      <p>University : <b>Universiti Teknologi Malaysia</b></p>
+      <p>Course : <b>Diploma in Computer Science (DDWD)</b></p>
+      <p>Section : <b>43</b></p>
+      <p>Matric Number : <b>A23DW1007</b></p>
+      <p>I was born on <b>8 January 2005</b> at <b>Taiping, Perak</b>. I'm the youngest of three siblings. I'm a Computer Science student with a passion for technology, user experience design, and programming.
+        Beyond academics, I love food hunting, watching movies, and listening to music. The deep love i have for my hobbies has led me to build a passion for singing and dancing.
+        Whether it's through music, dance, or technology, I love expressing creativity and bringing ideas to life.
+      </p>
+      <img src= "Hobby1.jpg" alt="Singing picture" width="196px" height="265px" >
+      <img src= "mur makan.jpg" alt="Food hunting" width="196px" height="265px" >
+      <img src= "Hobby2.jpg" alt="Dancing picture" width="196px" height="265px" >
+      <hr class="w3-opacity">
+      <p>Here are my Academic Backgroud</p>
+      <table style="text-align: center; border-collapse: collapse;" border="1px" >
+
+        <tr>
+            <th> Institution Name </th>
+            <th> Year </th>
+            <th> Logo </th>
+            <th> Link </th>
+        </tr>
+
+        <tr>
+            <td> Smart Reader Kids </td>
+            <td> 2009 - 2011 </td>
+            <td> <img src="logo srk.png" alt="Logo Picture" style="width:200px; height: 200px;"></td>
+            <td> <a href="https://smartreader.edu.my/">Smart Reader Kids</a> </td>
+        </tr>
+
+        <tr>
+            <td> Sekolah Kebangsaan Klian Pauh </td>
+            <td> 2012 - 2017 </td>
+            <td> <img src="Logo2.jpg" alt="Logo Picture" style="width:200px; height: 200px;"></td>
+            <td> <a href="https://ms.wikipedia.org/wiki/Sekolah_Kebangsaan_Klian_Pauh">SK Klian Pauh </a></td>
+        </tr>
+
+        <tr>
+            <td> Sekolah Menengah Kebangsaan Puteri Titiwangsa </td>
+            <td> 2018 - 2023 </td>
+            <td> <img src="Logo3.png" alt="Logo Picture" style="width:200px; height: 200px;"></td>
+            <td> <a href="https://ms.wikipedia.org/wiki/Sekolah_Menengah_Kebangsaan_Puteri_Titiwangsa">SMK Puteri Titiwangsa </a></td>
+        </tr>
+
+        <tr>
+          <td> Universiti Teknologi Malaysia </td>
+          <td> 2023 - Current </td>
+          <td> <img src="utm logo.png" alt="Logo Picture" style="width:200px; height: 200px;"></td>
+          <td> <a href="https://www.utm.my/">UTM</a> </td>
+      </tr>
+
+    </table>
+
+    <hr class="w3-opacity">
+
+      <h4 class="w3-padding-16">Technical Skills</h4>
+      <p class="w3-wide">Video Editing</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:95%">95%</div>
+      </div>
+      <p class="w3-wide">Web Design</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:85%">85%</div>
+      </div>
+      <p class="w3-wide">Programming</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:80%">80%</div>
+      </div>
+      <hr class="w3-opacity">
+      <h4 class="w3-padding-16">Wanted to know more about me? Click the button below</h4>
+   
+        <p>
+          <!-- View CV Button -->
+          <a href="MURFIQAH CV.pdf" target="_blank">
+            <button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom w3-hover-black">
+              View CV
+            </button>
+          </a>
+        
+          <!-- Download CV Button -->
+          <a href="MURFIQAH CV.pdf" download>
+            <button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom w3-hover-black">
+              Download CV
+            </button>
+          </a>
+        </p>
+        
+        <p>
+          <!-- View Portfolio Button -->
+          <a href="MURFIQAH PORTFOLIO.pdf" target="_blank">
+            <button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom w3-hover-black">
+              View Portfolio
+            </button>
+          </a>
+        
+          <!-- Download Portfolio Button -->
+          <a href="MURFIQAH PORTFOLIO.pdf" download>
+            <button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom w3-hover-black">
+              Download Portfolio
+            </button>
+          </a>
+        </p>
+        
+
+      </div>
+    </div>
+  
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey" id="contact">  
+    <div class="w3-row-padding">
+      <div class="w3-half">
+        <h3>SOCIAL MEDIA</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16 w3-hover-black">
+            <a href="https://www.instagram.com/murfiqah__?igsh=MWhhMWZ0eHdsZ2xseA%3D%3D&utm_source=qr"><img src="ig.png" class="w3-left w3-margin-right" style="width:50px"></a>
+            <span class="w3-large">Instagram</span><br>
+            <span>@murfiqah__</span>
+          </li>
+          <li class="w3-padding-16 w3-hover-black">
+            <a href="https://www.tiktok.com/@murfiqah_aina?_t=ZS-8uG2qSu3CSe&_r=1"><img src="tik tok.png" class="w3-left w3-margin-right" style="width:50px"></a>
+            <span class="w3-large">Tik Tok</span><br>
+            <span>@murfiqah_aina</span>
+          </li> 
+        </ul>
+      </div>
+
+      <div class="w3-half">
+        <h3>CONTACT ME</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="phone.png" class="w3-left w3-margin-right" style="width:50px"></a>
+            <span class="w3-large">Phone Number</span><br>
+            <span>+6019 775 7990</span>
+          </li>
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="gmail.png" class="w3-left w3-margin-right" style="width:50px"></a>
+            <span class="w3-large">Gmail</span><br>
+            <span>@murfiqah0801@gmail.com</span>
+          </li> 
+        </ul>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+</body>
+</html>
+

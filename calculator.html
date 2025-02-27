@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+          /* Fullscreen background */
+          body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('bgimg4.jpg') no-repeat center center/cover;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            color: white;
+        }
+        /* Dark overlay */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.811);
+        }
+
+         /* Centered content */
+         .container {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+            width: 350px;
+        }
+
+        h1 {
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        /* Input fields */
+        input {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Operation buttons */
+        .btn {
+            display: inline-block;
+            width: 45%;
+            padding: 12px;
+            font-size: 18px;
+            background: white;
+            color: black;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ffcc00;
+            color: black;
+        }
+
+        /* Result display */
+        .result {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* Navigation button */
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: transparent;
+            border: 2px solid white;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="container">
+        <h1>Simple Calculator</h1>
+        <p>Enter two numbers and choose an operation</p>
+
+        <input type="number" id="num1" placeholder="Enter first number">
+        <input type="number" id="num2" placeholder="Enter second number">
+
+        <br>
+        <button class="btn" onclick="calculate('+')">➕ Add</button>
+        <button class="btn" onclick="calculate('-')">➖ Subtract</button>
+        <button class="btn" onclick="calculate('*')">✖ Multiply</button>
+        <button class="btn" onclick="calculate('/')">➗ Divide</button>
+
+        <p class="result" id="calcResult"></p>
+
+        <a href="tools.html" class="back-btn">🔙 Back to Tools</a>
+    </div>
+
+    <script>
+        function calculate(operation) {
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            let result = document.getElementById('calcResult');
+
+            if (isNaN(num1) || isNaN(num2)) {
+                result.innerHTML = "⚠️ Please enter valid numbers!";
+                result.style.color = "yellow";
+                return;
+            }
+
+            let output;
+            switch (operation) {
+                case '+':
+                    output = num1 + num2;
+                    break;
+                case '-':
+                    output = num1 - num2;
+                    break;
+                case '*':
+                    output = num1 * num2;
+                    break;
+                case '/':
+                    output = num2 !== 0 ? (num1 / num2).toFixed(2) : "❌ Cannot divide by zero!";
+                    break;
+            }
+
+            result.innerHTML = `Result: ${output}`;
+            result.style.color = "white";
+        }
+    </script>
+
+</body>
+</html>
